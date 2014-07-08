@@ -16,12 +16,14 @@
     <script type="text/javascript" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            
             var dtData = new Object();
 
             $('#displayData').dataTable({
                 "processing": true,
                 "serverSide": true,
                 "ajax": function (data, callback, settings) {
+                    //Make a copy of the data object
                     dtData = data;
 
                     var paramlist = new Array();
@@ -62,7 +64,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-<table cellpadding="0" cellspacing="0" border="0" class="display" id="displayData"> 
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="displayData"> 
             <thead>
                 <tr>
                     <th align="left">ID</th>
