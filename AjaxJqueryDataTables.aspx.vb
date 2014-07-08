@@ -115,8 +115,8 @@ Partial Class AjaxJqueryDataTables
 
         query = String.Format(query, orderByClause, filteredWhere, iDisplayStart + 1, numberOfRowsToReturn, whereClause)
 
-
-        Dim conn As New SqlConnection(VW.SQLConnect.ConnectGuest())
+        'Connection string here
+        Dim conn As New SqlConnection("")
 
         Try
             conn.Open()
